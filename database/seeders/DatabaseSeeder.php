@@ -23,6 +23,14 @@ class DatabaseSeeder extends Seeder
             'updated_at' => Date::now(),
         ]);
 
+        DB::table('admin')->insert([
+            'username' => 'Admin',
+            'password' => bcrypt('asdasdasd'),
+            'is_admin' => true,
+            'created_at' => Date::now(),
+            'updated_at' => Date::now(),
+        ]);
+
         DB::table('suppliers')->insert([
             'nama_supplier' => 'PT. Kambing',
             'alamat' => 'Jl. Kambing No. 1',
